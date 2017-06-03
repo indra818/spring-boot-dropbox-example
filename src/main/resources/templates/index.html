@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="ko">
+	<meta charset="UTF-8"/>
+	<title>Dropbox CRUD</title>
+	<link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.4/dist/css/bootstrap.min.css}"/>
+	<link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.4/dist/css/bootstrap-theme.css}"/>
+	<link rel="stylesheet" th:href="@{/webjars/datatables/1.10.15/media/css/dataTables.bootstrap.min.css}"/>
+	<!--<link rel="stylesheet" th:href="@{/webjars/datatables/1.10.15/media/css/jquery.dataTables.min.css}"/>-->
+	<link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-header">
+		<a class="navbar-brand" th:href="@{/}">Dropbox CRUD</a>
+	</div>
+	<div class="container">
+	</div>
+</nav>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12 main">
+			<h1 class="page-header">Dashboard</h1>
+
+			<div class="row placeholders">
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<label for="inputFileSize" class="col-sm-1 control-label">Log File Size</label>
+						<div class="col-sm-2">
+							<input type="text" class="form-control" id="inputFileSize" placeholder="Default 10MB" />
+						</div>
+						<p class="col-sm-9">Total: <span class="totalFileSize">10</span>MB</p>
+					</div>
+				</div>
+			</div>
+
+			<h2 class="sub-header">Process Select Table</h2>
+			<div class="table-responsive">
+				<table class="table table-striped table-bordered table-hover dt-responsive nowrap" cellspacing="0" width="100%"></table>
+				<!--<table class="table table-striped">-->
+					<!--<thead>-->
+					<!--<tr>-->
+						<!--<th>#</th>-->
+						<!--<th>Excute</th>-->
+						<!--<th>Process</th>-->
+					<!--</tr>-->
+					<!--</thead>-->
+					<!--<tbody>-->
+					<!--<tr>-->
+						<!--<td>1</td>-->
+						<!--<td><input type="button" class="btn btn-default excute-btn" data-type="upload" value="실행" /></td>-->
+						<!--<td>file upload</td>-->
+					<!--</tr>-->
+
+					<!--<tr>-->
+						<!--<td>2</td>-->
+						<!--<td><input type="button" class="btn btn-default excute-btn" data-type="download" value="실행" /></td>-->
+						<!--<td>file download</td>-->
+					<!--</tr>-->
+
+					<!--<tr>-->
+						<!--<td>3</td>-->
+						<!--<td><input type="button" class="btn btn-default excute-btn" data-type="delete" value="실행" /></td>-->
+						<!--<td>file delete</td>-->
+					<!--</tr>-->
+					<!--</tbody>-->
+				<!--</table>-->
+			</div>
+		</div>
+	</div>
+</div>
+
+<script th:src="@{/webjars/jquery/1.12.4/dist/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/3.3.4/dist/js/bootstrap.min.js}"></script>
+<script th:src="@{/webjars/datatables/1.10.15/media/js/jquery.dataTables.js}"></script>
+<script th:src="@{/webjars/datatables/1.10.15/media/js/dataTables.bootstrap.js}"></script>
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>
